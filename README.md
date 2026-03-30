@@ -309,10 +309,14 @@ Diagrama simplificado:
 GPIO15 ---- Botao ---- GND
 ```
 
-### Vídeo explicativo
+### Vídeo demonstrando o funcionamento
 
-TBD
+Nesse primeiro vídeo, o terminal mostra os logs da api em tempo real, demonstrando que ela está recebendo as requisições
 
-### Foto do circuito
+https://github.com/user-attachments/assets/8cd14903-1043-4572-aa11-97543a0755d3
 
-TBD
+https://github.com/user-attachments/assets/94c12c21-2561-4fb1-a232-c637ac3102da
+
+### Montagem do circuito
+
+![WhatsApp Image 2026-03-30 at 10 23 01](https://github.com/user-attachments/assets/b40cac1a-7b2c-4f2f-a92b-9501020bef88)
