@@ -1,0 +1,32 @@
+---
+config:
+  layout: elk
+---
+
+graph TD
+    subgraph "Arquitetura do Sistema"
+        subgraph "Backend"
+            API[Go/Gin Producer API]
+        end
+        
+        subgraph "Mensageria"
+            RMQ[RabbitMQ Queue]
+        end
+        
+        subgraph "Processamento Assíncrono"
+            Worker[Middleware]
+        end
+        
+        subgraph "Banco de dados"
+            DB[(PostgreSQL)]
+        end
+    end
+
+    API -->|1. Publica Mensagem| RMQ
+    RMQ -->|2. Entrega Mensagem| Worker
+    Worker -->|3. Persiste Dados| DB
+
+    style API fill:#00ADD8,color:#fff,stroke:#333
+    style Worker fill:#00ADD8,color:#fff,stroke:#333
+    style RMQ fill:#ff6600,color:#fff,stroke:#333
+    style DB fill:#336791,color:#fff,stroke:#333
